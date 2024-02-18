@@ -45,7 +45,7 @@ CREATE TABLE reserva (
 	id_casa integer,
 	fecha_inicio timestamp not null,
 	fecha_fin timestamp not null,
-	precio_total numeric (4,2) not null,
+	precio_total numeric (6,2) not null,
 	estado varchar (10), -- pendiente, completado, cancelado.
 	CONSTRAINT pk_reserva
 		PRIMARY KEY (id_reserva, dni_cliente, id_casa), 
@@ -364,7 +364,7 @@ Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est ris
 
 Fusce consequat. Nulla nisl. Nunc nisl.', 3.73);
 
-select * from casa
+--select * from casa
 
 
 --INSERCIÓN DE DATOS TABLA CLIENTES Y CREACIÓN DE PK, CK Y FK SERGIO GONZÁLEZ CORTÉS--
@@ -481,7 +481,6 @@ ADD CONSTRAINT fk_reserva_casa
 ADD CONSTRAINT fk_reserva_cliente
 	FOREIGN KEY (dni_cliente)
 	REFERENCES cliente;
-
 ALTER TABLE valoraciones
 ADD CONSTRAINT fk_valoraciones_reserva
 	FOREIGN KEY (id_reserva, id_casa, dni_cliente)
@@ -491,3 +490,205 @@ ALTER TABLE tarifa
 ADD CONSTRAINT fk_tarifa_casa
 	FOREIGN KEY (id_casa)
 	REFERENCES casa;
+	
+--Insercion reserva Daniel Martínez 
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (1, '48-3659357', 1, '2024-01-01', '2024-09-21', 3289.83, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (2, '50-6154584', 2, '2024-01-15', '2024-07-04', 2235.91, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (3, '15-8909275', 3, '2024-02-22', '2024-12-09', 5018.0, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (4, '65-3973767', 4, '2024-03-12', '2024-12-06', 1138.42, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (5, '13-2024393', 5, '2024-01-24', '2024-09-27', 5400.44, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (6, '14-4521735', 6, '2024-03-03', '2024-07-17', 7429.81, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (7, '84-0630148', 7, '2024-03-29', '2024-08-04', 9338.09, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (8, '36-8957353', 8, '2024-01-08', '2024-04-24', 1597.6, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (9, '22-0585817', 9, '2024-01-12', '2024-05-14', 8495.97, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (10, '89-6178997', 10, '2024-03-25', '2024-05-03', 6685.72, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (11, '51-3279600', 11, '2024-01-13', '2024-08-18', 713.58, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (12, '05-2666474', 12, '2024-03-18', '2024-09-12', 5603.24, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (13, '48-2253645', 13, '2024-03-18', '2024-09-07', 3360.4, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (14, '53-3614606', 14, '2024-01-02', '2024-05-08', 6266.13, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (15, '84-6357066', 15, '2024-01-31', '2024-07-12', 5578.8, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (16, '82-0374696', 16, '2024-01-24', '2024-06-19', 9111.6, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (17, '26-8489960', 17, '2024-02-21', '2024-04-20', 7010.75, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (18, '15-3865658', 18, '2024-01-20', '2024-09-06', 4498.69, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (19, '52-5549281', 19, '2024-02-07', '2024-10-08', 6153.4, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (20, '76-9866357', 20, '2024-03-17', '2024-07-11', 6854.31, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (21, '62-4275617', 21, '2024-03-17', '2024-12-15', 9591.59, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (22, '48-5143834', 22, '2024-03-05', '2024-07-03', 7594.76, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (23, '61-8479166', 23, '2024-01-21', '2024-07-12', 4823.12, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (24, '75-2945747', 24, '2024-01-05', '2024-09-30', 5497.02, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (25, '73-3594354', 25, '2024-01-18', '2024-05-19', 5807.97, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (26, '34-2762449', 26, '2024-02-07', '2024-04-11', 1080.7, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (27, '97-9677216', 27, '2024-02-26', '2024-07-15', 3000.07, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (28, '33-3337961', 28, '2024-03-29', '2024-04-12', 5809.82, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (29, '76-5618031', 29, '2024-02-15', '2024-04-30', 7207.94, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (30, '11-0586239', 30, '2024-03-11', '2024-11-13', 4964.04, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (31, '33-4926474', 31, '2024-02-11', '2024-12-08', 3374.69, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (32, '69-2264043', 32, '2024-02-01', '2024-05-21', 9017.28, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (33, '93-3089919', 33, '2024-03-31', '2024-06-12', 8545.91, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (34, '67-8663501', 34, '2024-03-26', '2024-07-07', 3852.29, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (35, '58-9287697', 35, '2024-01-15', '2024-07-17', 1719.42, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (36, '32-9923664', 36, '2024-03-24', '2024-09-11', 2152.04, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (37, '40-1199180', 37, '2024-02-16', '2024-12-19', 12.27, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (38, '52-1294279', 38, '2024-01-07', '2024-11-13', 9154.63, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (39, '67-8663845', 39, '2024-03-25', '2024-11-19', 2171.46, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (40, '89-7394751', 40, '2024-03-27', '2024-06-18', 1785.74, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (41, '10-4465337', 41, '2024-03-08', '2024-07-23', 435.1, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (42, '33-2608964', 42, '2024-02-06', '2024-07-07', 8195.83, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (43, '78-3463634', 43, '2024-01-16', '2024-06-24', 622.38, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (44, '35-2274278', 44, '2024-01-03', '2024-08-22', 9658.15, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (45, '54-3836902', 45, '2024-03-09', '2024-12-19', 2072.81, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (46, '62-6474468', 46, '2024-02-23', '2024-12-09', 7953.54, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (47, '10-8360455', 47, '2024-01-08', '2024-12-04', 3693.74, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (48, '21-1518574', 48, '2024-01-31', '2024-10-10', 4922.78, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (49, '22-6590190', 49, '2024-03-07', '2024-04-05', 4506.93, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (50, '00-9568614', 50, '2024-01-30', '2024-06-26', 7963.44, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (51, '21-5930716', 51, '2024-03-31', '2024-05-01', 851.92, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (52, '68-2535004', 52, '2024-02-03', '2024-07-18', 1612.2, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (53, '62-7272340', 53, '2024-01-06', '2024-11-25', 8739.69, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (54, '18-1131501', 54, '2024-02-15', '2024-07-13', 6644.94, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (55, '59-6442874', 55, '2024-01-08', '2024-07-09', 5393.87, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (56, '32-5813369', 56, '2024-02-29', '2024-10-03', 1558.17, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (57, '78-1429494', 57, '2024-02-08', '2024-10-03', 2405.11, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (58, '57-7846706', 58, '2024-03-18', '2024-10-22', 529.12, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (59, '91-6066648', 59, '2024-01-10', '2024-07-31', 9021.92, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (60, '10-2879589', 60, '2024-02-18', '2024-04-22', 8997.99, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (61, '60-8848770', 61, '2024-02-15', '2024-12-22', 7375.22, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (62, '84-1573978', 62, '2024-02-25', '2024-10-06', 6407.89, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (63, '58-8577663', 63, '2024-02-03', '2024-04-06', 1162.66, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (64, '53-6163989', 64, '2024-01-18', '2024-07-17', 3928.58, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (65, '93-3358632', 65, '2024-01-31', '2024-09-12', 5155.42, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (66, '55-5540315', 66, '2024-02-17', '2024-07-04', 6929.81, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (67, '39-4442289', 67, '2024-03-10', '2024-08-18', 9310.96, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (68, '23-2237512', 68, '2024-02-13', '2024-05-08', 7777.71, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (69, '11-5992218', 69, '2024-03-26', '2024-08-23', 2569.67, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (70, '34-5412811', 70, '2024-02-02', '2024-07-10', 7063.4, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (71, '31-2044274', 71, '2024-02-29', '2024-07-03', 3591.13, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (72, '14-8006313', 72, '2024-03-21', '2024-05-11', 4337.51, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (73, '88-8894840', 73, '2024-02-03', '2024-09-20', 894.1, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (74, '05-4250010', 74, '2024-03-26', '2024-11-04', 9361.79, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (75, '66-2882423', 75, '2024-03-23', '2024-07-29', 2491.81, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (76, '66-8348811', 76, '2024-02-28', '2024-05-12', 6212.2, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (77, '53-8529486', 77, '2024-01-10', '2024-06-18', 1725.28, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (78, '84-0760634', 78, '2024-03-09', '2024-08-17', 5816.59, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (79, '67-8317293', 79, '2024-03-30', '2024-12-14', 4565.63, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (80, '66-5288590', 80, '2024-03-11', '2024-10-02', 6654.88, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (81, '14-1967074', 81, '2024-03-06', '2024-07-13', 7204.62, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (82, '37-0199568', 82, '2024-01-14', '2024-09-18', 3179.74, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (83, '53-1594511', 83, '2024-02-21', '2024-07-30', 4877.21, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (84, '22-9430085', 84, '2024-01-02', '2024-10-20', 4918.95, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (85, '38-0786750', 85, '2024-02-16', '2024-08-08', 9920.06, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (86, '98-9819061', 86, '2024-03-18', '2024-06-18', 5801.18, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (87, '71-8568964', 87, '2024-01-27', '2024-08-26', 2663.59, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (88, '46-5263698', 88, '2024-02-11', '2024-11-06', 8080.71, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (89, '60-5176516', 89, '2024-03-22', '2024-12-30', 4903.44, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (90, '59-8527852', 90, '2024-02-29', '2024-05-27', 4452.5, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (91, '87-1226483', 91, '2024-01-02', '2024-10-31', 7266.68, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (92, '57-0450731', 92, '2024-02-20', '2024-05-05', 7531.11, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (93, '65-5103377', 93, '2024-01-09', '2024-07-05', 2285.95, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (94, '56-4626376', 94, '2024-02-14', '2024-06-02', 9192.01, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (95, '71-3413368', 95, '2024-03-02', '2024-09-03', 9556.96, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (96, '30-0917571', 96, '2024-01-23', '2024-11-10', 801.52, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (97, '23-6932404', 97, '2024-01-18', '2024-06-18', 5816.64, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (98, '38-9807468', 98, '2024-02-23', '2024-05-19', 4776.64, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (99, '51-4014321', 99, '2024-01-11', '2024-10-05', 236.49, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (100, '58-8747021', 100, '2024-02-01', '2024-11-07', 5697.23, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (101, '67-0228678', 101, '2024-01-04', '2024-11-21', 4284.04, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (102, '83-5474236', 102, '2024-02-08', '2024-11-28', 9558.97, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (103, '46-2269260', 103, '2024-02-22', '2024-10-04', 413.86, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (104, '86-6443722', 104, '2024-02-19', '2024-08-21', 7302.22, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (105, '18-9790290', 105, '2024-02-03', '2024-10-04', 5271.07, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (106, '84-7045687', 106, '2024-01-19', '2024-05-29', 2731.6, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (107, '87-0232542', 107, '2024-02-06', '2024-08-09', 8862.56, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (108, '12-8590363', 108, '2024-02-26', '2024-08-15', 1517.85, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (109, '31-4361644', 109, '2024-01-27', '2024-12-16', 8079.2, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (110, '90-0552016', 110, '2024-02-09', '2024-07-06', 6720.34, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (111, '21-6724706', 111, '2024-01-25', '2024-07-24', 4222.5, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (112, '08-0314016', 112, '2024-03-02', '2024-06-15', 6751.75, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (113, '79-3033779', 113, '2024-03-27', '2024-04-12', 5468.89, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (114, '70-4191507', 114, '2024-03-30', '2024-06-10', 4407.83, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (115, '45-8569837', 115, '2024-03-26', '2024-09-16', 82.07, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (116, '24-5998358', 116, '2024-01-04', '2024-12-27', 9527.54, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (117, '75-1783616', 117, '2024-03-12', '2024-09-26', 3833.86, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (118, '59-7611169', 118, '2024-02-03', '2024-09-09', 1302.95, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (119, '90-0155340', 119, '2024-03-08', '2024-04-30', 628.22, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (120, '10-0608463', 120, '2024-02-20', '2024-12-09', 5105.72, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (121, '53-4235239', 121, '2024-02-29', '2024-07-22', 7622.11, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (122, '73-6879776', 122, '2024-01-22', '2024-10-04', 9908.28, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (123, '67-7321659', 123, '2024-02-12', '2024-09-01', 684.46, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (124, '51-8080362', 124, '2024-03-30', '2024-05-20', 5975.44, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (125, '81-5751381', 125, '2024-01-24', '2024-04-02', 9130.77, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (126, '03-9060589', 126, '2024-01-07', '2024-05-27', 285.91, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (127, '24-7490414', 127, '2024-01-10', '2024-12-13', 7426.07, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (128, '21-4870228', 128, '2024-03-13', '2024-06-06', 823.56, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (129, '42-6479089', 129, '2024-02-21', '2024-12-25', 6718.46, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (130, '92-7455688', 130, '2024-03-14', '2024-10-22', 9989.8, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (131, '98-0938420', 131, '2024-03-19', '2024-09-24', 7723.67, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (132, '52-5981539', 132, '2024-02-17', '2024-12-22', 5607.66, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (133, '77-1453246', 133, '2024-03-28', '2024-11-10', 3438.62, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (134, '38-0640275', 134, '2024-03-17', '2024-10-20', 233.21, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (135, '75-6170886', 135, '2024-01-10', '2024-04-14', 8819.81, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (136, '29-5839871', 136, '2024-01-10', '2024-09-16', 3166.25, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (137, '50-5945939', 137, '2024-01-11', '2024-08-06', 1073.01, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (138, '12-1786052', 138, '2024-01-22', '2024-09-14', 8466.96, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (139, '31-9206942', 139, '2024-01-04', '2024-12-09', 8299.14, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (140, '40-6944345', 140, '2024-01-30', '2024-07-05', 1195.92, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (141, '54-5807064', 141, '2024-03-31', '2024-09-30', 8735.42, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (142, '24-0580179', 142, '2024-02-25', '2024-07-08', 6501.94, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (143, '84-7759603', 143, '2024-01-13', '2024-04-25', 1116.9, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (144, '87-4102591', 144, '2024-02-12', '2024-05-28', 1019.76, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (145, '67-7249578', 145, '2024-03-04', '2024-09-22', 8290.76, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (146, '74-7321379', 146, '2024-01-19', '2024-12-26', 8342.63, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (147, '15-0515887', 147, '2024-01-28', '2024-08-17', 6061.53, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (148, '31-7875720', 148, '2024-03-09', '2024-08-23', 248.59, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (149, '25-6061828', 149, '2024-02-16', '2024-07-04', 6240.84, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (150, '73-1429826', 150, '2024-01-31', '2024-09-08', 6178.36, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (151, '38-6395905', 151, '2024-02-25', '2024-06-19', 5100.37, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (152, '70-4713127', 152, '2024-01-02', '2024-06-02', 1895.49, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (153, '87-8897182', 153, '2024-03-02', '2024-11-21', 5038.29, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (154, '05-8406263', 154, '2024-01-13', '2024-08-14', 761.71, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (155, '99-2385082', 155, '2024-01-06', '2024-04-03', 2318.75, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (156, '55-5943925', 156, '2024-02-24', '2024-08-07', 5343.03, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (157, '61-5699739', 157, '2024-02-14', '2024-08-19', 1203.38, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (158, '82-1684618', 158, '2024-02-17', '2024-10-15', 4475.86, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (159, '78-6000930', 159, '2024-01-13', '2024-04-19', 3957.71, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (160, '86-0400377', 160, '2024-01-11', '2024-12-18', 1952.38, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (161, '88-8865599', 161, '2024-03-19', '2024-08-31', 1926.6, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (162, '99-8559203', 162, '2024-02-23', '2024-08-02', 1890.77, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (163, '73-8251060', 163, '2024-01-16', '2024-07-12', 9928.7, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (164, '78-8716217', 164, '2024-02-17', '2024-12-03', 2198.81, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (165, '26-5484314', 165, '2024-02-20', '2024-08-06', 1502.16, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (166, '76-7724877', 166, '2024-02-10', '2024-12-28', 117.39, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (167, '80-8000280', 167, '2024-01-30', '2024-05-10', 4258.26, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (168, '17-7157102', 168, '2024-03-18', '2024-07-22', 8655.65, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (169, '25-5419620', 169, '2024-03-17', '2024-06-02', 4531.65, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (170, '23-6792413', 170, '2024-03-04', '2024-08-23', 6288.43, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (171, '31-0831404', 171, '2024-01-15', '2024-12-13', 4952.78, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (172, '53-2608559', 172, '2024-01-13', '2024-12-08', 2.85, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (173, '12-9442631', 173, '2024-01-15', '2024-07-02', 1575.2, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (174, '19-8937887', 174, '2024-02-04', '2024-08-02', 7627.24, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (175, '00-3094909', 175, '2024-03-07', '2024-08-30', 3943.02, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (176, '82-3900295', 176, '2024-01-19', '2024-10-07', 9770.07, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (177, '69-3757222', 177, '2024-03-07', '2024-10-14', 7678.93, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (178, '53-7532372', 178, '2024-02-17', '2024-05-28', 3942.69, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (179, '80-5801680', 179, '2024-02-09', '2024-12-07', 6886.58, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (180, '84-4942506', 180, '2024-01-26', '2024-07-18', 6763.07, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (181, '51-8066284', 181, '2024-02-01', '2024-05-18', 6344.13, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (182, '00-1622519', 182, '2024-01-31', '2024-11-11', 4174.38, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (183, '18-3026167', 183, '2024-02-15', '2024-11-22', 9530.66, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (184, '38-3490205', 184, '2024-01-02', '2024-04-02', 6215.14, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (185, '95-5798309', 185, '2024-02-16', '2024-06-13', 8521.98, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (186, '10-3562664', 186, '2024-03-22', '2024-06-13', 1744.13, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (187, '01-1162762', 187, '2024-01-26', '2024-05-29', 7231.5, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (188, '10-5069256', 188, '2024-03-11', '2024-07-13', 8214.98, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (189, '52-7396525', 189, '2024-01-26', '2024-04-25', 696.22, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (190, '29-1077624', 190, '2024-03-25', '2024-05-03', 2529.86, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (191, '88-1923653', 191, '2024-03-01', '2024-10-06', 7005.52, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (192, '36-0582819', 192, '2024-03-13', '2024-05-25', 2449.51, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (193, '23-0598155', 193, '2024-01-16', '2024-05-08', 5422.44, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (194, '99-5453099', 194, '2024-03-24', '2024-08-24', 2214.96, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (195, '11-3564121', 195, '2024-01-06', '2024-06-27', 6278.62, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (196, '75-0870727', 196, '2024-03-02', '2024-07-19', 1282.57, 'cancelado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (197, '32-0819246', 197, '2024-03-18', '2024-10-04', 3536.35, 'pendiente');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (198, '20-7009676', 198, '2024-01-26', '2024-11-27', 3061.01, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (199, '90-8086374', 199, '2024-02-08', '2024-08-03', 7161.8, 'completado');
+insert into reserva (id_reserva, dni_cliente, id_casa, fecha_inicio, fecha_fin, precio_total, estado) values (200, '40-1546247', 200, '2024-03-08', '2024-07-01', 9178.15, 'pendiente');
